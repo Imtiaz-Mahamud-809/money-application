@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money ADD/SEND WebApplication</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google fonts Start -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- Google fonts Ends -->
+  </head>
+  <body>
+    <div class="max-w-full bg-zinc-600">
+      <section
+        class="max-w-[460px] h-[850px] m-auto mt-5 bg-gray-300 border-stone-500 border-[12px] rounded-3xl"
+      >
+        <div class="toast toast-center mb-18">
+          <div
+            id="invalidNumber"
+            class="alert alert-info text-lg font-bold text-black bg-orange-800 border-none"
+            hidden
+          >
+            <span>Please Enter The Valid Mobile Number..!</span>
+          </div>
+          <div
+            id="pinNotMatch"
+            class="alert alert-info text-lg font-bold text-black bg-orange-800 border-none"
+            hidden
+          >
+            <span>Please Enter The Right PIN..!</span>
+          </div>
+          <div
+            id="amountAlart"
+            class="alert alert-info text-lg font-bold text-black bg-orange-800 border-none"
+            hidden
+          >
+            <span>Please Enter Your Amount..!</span>
+          </div>
+          <div
+            id="insufficientBalance"
+            class="alert alert-info text-lg font-bold text-black bg-orange-800 border-none"
+            hidden
+          >
+            <span>Insufficient Balance..!</span>
+          </div>
+          <div
+            id="addSuccessfully"
+            class="alert alert-success text-lg font-semibold text-black bg-cyan-500 border-none"
+            hidden
+          >
+            <span>Add Money Successfully.</span>
+          </div>
+          <div
+            id="sendSuccessfully"
+            class="alert alert-success text-lg font-semibold text-black bg-cyan-500 border-none"
+            hidden
+          >
+            <span>Send Money Successfully.</span>
+          </div>
+        </div>
+        <div class="w-full text-center text-3xl font-bold capitalize mt-10">
+          <h1 class="text-gray-950 inline-block border-b-3 pb-1.5 font-mono">
+            SIMPLE MONEY TRANSFERING SYSTEM
+          </h1>
+        </div>
+        <div
+          class="my-5 mx-15 text-center uppercase font-bold py-5 bg-indigo-500 rounded-2xl"
+        >
+          <h2 class="text-white text-2xl mb-2 font-semibold">Total amount</h2>
+          <span id="totalAmount" class="text-4xl text-rose-400 font-extralight">500</span>
+        </div>
+        <div class="mx-10 flex justify-around">
+          <button
+            id="addMoneyShow"
+            class="text-white font-semibold uppercase bg-indigo-500 rounded-xl py-4 px-6 cursor-pointer"
+          >
+            Add money
+          </button>
+          <button
+            id="sendMoneyShow"
+            class="text-white font-semibold uppercase bg-indigo-500 rounded-xl py-4 px-6 cursor-pointer"
+          >
+            Send money
+          </button>
+        </div>
+        <div class="text-black mx-5 my-4 p-8 bg-gray-400 rounded-2xl">
+          <h3 class="font-semibold p-1">Phone Number</h3>
+          <input
+            id="numberInput"
+            type="text"
+            placeholder="Enter Mobile Number"
+            class="w-full outline-0 border-2 border-gray-500 p-2 rounded-2xl"
+          />
+          <h3 class="font-semibold p-1 mt-2">Add Amount</h3>
+          <input
+            id="addAmountInput"
+            type="text"
+            placeholder="Enter Your Amount"
+            class="w-full outline-0 border-2 border-gray-500 p-2 mb-2 rounded-2xl"
+          />
+          <h3 class="font-semibold p-1">PIN Number</h3>
+          <input
+            id="passwordInput"
+            type="password"
+            placeholder="Enter Your PIN"
+            class="w-full outline-0 border-2 border-gray-500 p-2 rounded-2xl"
+          />
+          <button
+            id="addMoneyHide"
+            class="text-white font-semibold uppercase bg-teal-900 rounded-xl mt-5 py-4 px-6 w-full cursor-pointer"
+            hidden
+          >
+            Add money
+          </button>
+          <button
+            id="sendMoneyHide"
+            class="text-white font-semibold uppercase bg-teal-900 rounded-xl mt-5 py-4 px-6 w-full cursor-pointer"
+            hidden
+          >
+            Send money
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
